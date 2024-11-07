@@ -8,7 +8,7 @@ Komento saadaan cmath kirjastolla. Komento menee näin: */
 
 void ensimmäinen(){ //Käytän void komentoa tehdäkseni useamman funktion
     int x;
-    std::cout << "anna numero: "; 
+    std::cout << "\n" << "anna numero: "; 
     std::cin >> x; 
 
     float y = remainder(x, 2.0);
@@ -29,7 +29,7 @@ komennolla*/
 
  void toinen(){
     float y;  //y muuttuja
-    std::cout << "anna numero: ";
+    std::cout << "\n" << "anna numero: ";
     std::cin >> y;
 
     if (-3 < y <0){
@@ -43,8 +43,54 @@ komennolla*/
     mutta pienempi, kuin 0*/
  }
 
+/* 3. TÄmä onglema voidaan ratkaista taas if else lauseella*/
 
  void kolmas(){
-    
- }
+    float x;
+    float y;
+    float z;
 
+    std::cout << "\n" << "Anna numero: ";
+    std::cin >> x;
+    std::cout << "Anna toinen numero: ";
+    std::cin >> y;
+    std::cout << "Anna kolmas numero: ";
+    std::cin >> z;
+
+    if (z<=x) {
+        std::cout << "\n" << "z ei ole suurempi, kun x" << "\n";
+    }
+    else if (y-1<=z) {
+        std::cout << "\n" << "z ei ole pienempi, kuin y-1" << "\n";
+    }
+    else{
+        std::cout << "\n" << "Lauseke totutui" << "\n";
+    }
+ } /*else if lauseet eivät ole suositeltavia, kun työskennellään valinnan kanssa
+ Lisää tietoa main funktiossa*/
+
+
+
+int main (){
+    int valinta;
+    std::cout << "Minkä kohdan haluat suorittaa?: ";
+    std:: cin >> valinta;
+
+    switch(valinta){
+        case '1':
+            ensimmäinen();
+            return 0;
+            break;
+        
+        case '2':
+            toinen();
+            return 0;
+            break;
+
+        case '3': 
+            kolmas();
+            return 0;
+            break;
+    }
+    /*Switch komento on tehokkaampi verrattuna useampaan else if komentoon*/
+}
