@@ -12,7 +12,7 @@ int main (){
     std::cin >> x;
     std::cout << "\n" << "anna toinen luku: ";
     std::cin >> y;
-    std::cout << "\n" << "anna viimeinen luku: "; << "\n"
+    std::cout << "\n" << "anna viimeinen luku: "; << "\n";
     std::cin >> z;
 
     //Output ja input
